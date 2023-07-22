@@ -2,8 +2,14 @@
 body {
     background-color: #36454F;
   }
+
+  img {
+    
+  }
   
   h1 {
     color: white;
     size: 10;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 60px;
   }
