@@ -1,27 +1,27 @@
 Notification.requestPermission().then(perm => {
    console.log(perm);
 })
-var time = new Date();
+
 setInterval(function() {
-    var time = Date()
-    return time;
-}, 100);
-setInterval(function() {
-    if (time.getHours() == 9 && time.getMinutes() ==0 && time.getSeconds() == 0) {
+    var time = new Date()
+    var hours = time.getHours();
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
+    if (hours == 9 && minutes ==0 && seconds == 0) {
         new Notification("From Remind - Good Morning!", {
             body: "Good Morning! What do you need to work on today or in the future? Update your Remind! "
 
         })
         console.log("Push Given. All is well.");
     }
-    else if (time.getHours() == 11 && time.getMinutes() ==49 && time.getSeconds() ==20) {
+    else if (hours == 15 && minutes ==0 && seconds ==0) {
         new Notification("From Remind - Good Afternoon!", {
             body: "You are halfway through the day! What have you completed? What are you still working on? Update your Remind!"
 
         })
         console.log("Push Given. All is well.");
     }
-    else if (time.getHours() == 19 && time.getMinutes() ==0 && time.getSeconds() == 0) {
+    else if (hours == 19 && minutes ==0 && seconds == 0) {
         new Notification("From Remind - Good Evening!", {
             body: "You are done with the day! How did it go? What have you done? Update your Remind!"
 
@@ -29,7 +29,12 @@ setInterval(function() {
         console.log("Push Given. All is well.");
     }
     else {
-        console.log("No Push Given. Time is " + time);
+        console.log("No Push Given. Time is " +hours + ":" + minutes + ":" + seconds);
+        new Notification("From Remind - No WOrk!", {
+            body: "You are done with the day! How did it go? What have you done? Update your Remind!"
+
+        })
+
     }
 
 }, 100);
