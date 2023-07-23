@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="home.css" rel="stylesheet" type="text/css" />
+  <script src="home.js"></script>
 </head>
 
 <div>
@@ -15,9 +16,16 @@
     <h1>
     Remind App
     </h1>
+</div>
 
+<div class="container">
+    <div id="newtask">
+        <input type="text" placeholder="Add Tasks">
+        <input type="datetime" placeholder="Add Due Date">
+        <span onclick="newElement()" class="addBtn">Add</span>
+    </div>
+    <div id="tasks"></div>
 
-  
 </div>
 
 </html>
